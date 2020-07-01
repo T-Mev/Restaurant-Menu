@@ -15,7 +15,7 @@ public class Restaurant {
         menuList.add(soup);
         menuList.add(cookie);
 
-        //Creating and printing initial menu
+//      Creating and printing initial menu
         Menu newMenu = new Menu(menuList, new Date());
         System.out.println("\n▶▶Initial Menu:");
         newMenu.printMenu();
@@ -40,8 +40,8 @@ public class Restaurant {
 ////      Determining whether two different menu items are equal
 //        System.out.println("\n▶▶Are menu items cookie and lobster equal?");
 //        System.out.println(cookie.equals(lobster));
-
-//        //      Determining whether two of the same menu items are equal
+//
+////      Determining whether two of the same menu items are equal
 //        MenuItem cookie2 = new MenuItem("Chocolate Chip Cookie",1.99, "'Freshly Baked Cookie'", "Dessert",true);
 //        System.out.println("\n▶▶Are menu items cookie and cookie2 equal?");
 //        System.out.println(cookie.equals(cookie2));
