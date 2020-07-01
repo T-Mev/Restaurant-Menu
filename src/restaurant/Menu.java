@@ -1,11 +1,48 @@
 package restaurant;
 
-public class Menu {
-    public static void main(String[] args) {
-        MenuItem cookie = new MenuItem(1.99, "Chocolate chip cookie", "Dessert");
+import java.util.Date;
+import java.util.List;
 
-        System.out.println("\nDescription: " + cookie.getDescription());
-        System.out.println("Cost: $" + cookie.getPrice());
-        System.out.println("Category: " + cookie.getCategory());
+public class Menu {
+    private List<MenuItem> items;
+    private Date dateUpdated;
+
+    public Menu(List<MenuItem> items, Date dateUpdated) {
+        this.items = items;
+        this.dateUpdated = dateUpdated;
+    }
+
+    public List<MenuItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<MenuItem> items) {
+        this.items = items;
+    }
+
+    public Date getDateUpdated() {
+        return dateUpdated;
+    }
+
+    public void setDateUpdated(Date dateUpdated) {
+        this.dateUpdated = dateUpdated;
+    }
+
+    public void addMenuItem(MenuItem item) {
+            this.items.add(item);
+    }
+
+    public void removeMenuItem(MenuItem item) {
+        this.items.remove(item);
+    }
+
+    public void printMenu() {
+        System.out.println("\n***Menu***");
+        for (MenuItem item: items) {
+            System.out.println(item);
+        }
+        System.out.println("\n[Menu Last Updated: " + dateUpdated + "]");
+
     }
 }
+
